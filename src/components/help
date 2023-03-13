@@ -1,0 +1,45 @@
+import { TYPES } from '../constants/types';
+import { Link } from 'react-router-dom';
+
+{pokemon.map((pok) => 
+            <div className='mainContainer' key={pok.name}>
+              <div className='container'>
+                <div
+                  className='card'
+                  style={{ background: TYPES[pok.types[0].type.name] }}
+                >
+                  <div className='info'>
+                    <h3>{pok.name}</h3>
+                    <h3>{pok.types[0].type.name}</h3>
+                  </div>
+                  <Link to={`/detail/${pok.id}`}>
+                    <img
+                      src={pok.sprites.other.home.front_default}
+                      alt='pokemon'
+                      className='imgPoke'
+                    />
+                  </Link>
+                </div>
+                {/*
+                  <img src={pok.sprites.other.dream_world.front_default} alt='pokemon'/>
+                  <img src={pok.sprites.other.home.front_default} alt='pokemon'/>
+                  <img src={pok.sprites.other['official-artwork'].front_default} alt='pokemon'/>
+                  */}
+              </div>
+            </div>
+          )}
+
+
+        <div>
+          <div>
+            <div>Atack</div>
+            <div>Stats</div>
+          </div>
+          <div>
+            <div>Data</div>
+            <div>
+              <img src={poke.sprites.other.home.front_default} alt={poke.name} />
+            </div>
+            <div>Name Types</div>
+          </div>
+        </div>

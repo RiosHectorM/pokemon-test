@@ -1,0 +1,7 @@
+.containerMain {
+  display: flex;
+  flex-direction: column;
+  background: red;
+  width: 100%;
+  height: 100%;
+}
